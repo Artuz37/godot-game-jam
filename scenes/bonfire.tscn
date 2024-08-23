@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cij45xrjbtvd"]
+[gd_scene load_steps=9 format=3 uid="uid://ccu5hlqb8py8w"]
 
 [ext_resource type="Script" path="res://scripts/bonfire.gd" id="1_0i7dl"]
 [ext_resource type="Texture2D" uid="uid://cnljs2tri7ef0" path="res://assets/fire.png" id="2_gvlpm"]

@@ -25,7 +25,7 @@ func deal_damage(amount: int) -> void:
 	if immunity > 0:
 		return
 	hp -= amount
-	if hp < 0:
+	if hp <= 0:
 		print("YOU DIED")
 		get_tree().reload_current_scene()
 	print("Dostałes hita za %s" % amount)
