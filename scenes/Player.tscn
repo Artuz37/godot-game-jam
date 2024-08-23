@@ -1,6 +1,7 @@
-[gd_scene load_steps=58 format=3 uid="uid://cf6668k4pbk1c"]
+[gd_scene load_steps=59 format=3 uid="uid://cf6668k4pbk1c"]
 
 [ext_resource type="Texture2D" uid="uid://rderbfsxmojh" path="res://assets/Player_anim2.png" id="1_cy8ni"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_kxfbs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_grx8p"]
 atlas = ExtResource("1_cy8ni")
@@ -423,10 +424,11 @@ radius = 7.0
 height = 26.0
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_kxfbs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_opo3w")
-animation = &"walk"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
