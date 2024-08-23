@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ty3p661n2126" path="res://assets/cavesofgallet.png" id="1_uha1l"]
 [ext_resource type="PackedScene" uid="uid://cf6668k4pbk1c" path="res://scenes/Player.tscn" id="2_2fikb"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ulsrn"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_130to"]
 texture = ExtResource("1_uha1l")
 0:0/0 = 0
 1:0/0 = 0
@@ -601,7 +601,7 @@ texture = ExtResource("1_uha1l")
 
 [sub_resource type="TileSet" id="TileSet_7hebe"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_ulsrn")
+sources/0 = SubResource("TileSetAtlasSource_130to")
 
 [node name="Game" type="Node2D"]
 
@@ -611,7 +611,7 @@ position = Vector2(276, 237)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(3, 3)
 
-[node name="Layer0" type="TileMapLayer" parent="."]
+[node name="tilemap_cave" type="TileMapLayer" parent="."]
 use_parent_material = true
 tile_map_data = PackedByteArray("AAANABAAAAALAAIAAAAOABAAAAALAAIAAAAPABAAAAALAAIAAAAQABAAAAALAAIAAAARABAAAAALAAIAAAASABAAAAALAAIAAAATABAAAAALAAIAAAAUABAAAAALAAIAAAA=")
 tile_set = SubResource("TileSet_7hebe")
