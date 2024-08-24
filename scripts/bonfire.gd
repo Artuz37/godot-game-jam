@@ -1,6 +1,5 @@
 extends Area2D
 
-@onready var player_manager = $"%PlayerManager"
 var player_present = false
 
 var heal_timer: float = 0.0
@@ -10,7 +9,7 @@ func _process(delta: float) -> void:
 	if player_present:
 		heal_timer += delta
 		if heal_timer >= heal_interval:
-			player_manager.heal(1)
+			PlayerManager.heal(1)
 			heal_timer = 0.0  # Reset the timer
 
 

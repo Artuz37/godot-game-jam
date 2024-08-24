@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var player_manager = $"%PlayerManager"
+@onready var player_manager = get_node("/root/PlayerManager")
 var player_present = false
 
 

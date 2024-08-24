@@ -1,8 +1,9 @@
-[gd_scene load_steps=47 format=3 uid="uid://cw1fdhdv7jos"]
+[gd_scene load_steps=48 format=3 uid="uid://cw1fdhdv7jos"]
 
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="1_h6yse"]
 [ext_resource type="Texture2D" uid="uid://dpndenp8w5af7" path="res://assets/Undead Sprite Pack/SHEETS/undead_walk_sheet.png" id="1_qkxhw"]
 [ext_resource type="Texture2D" uid="uid://dtx2ab7ittrdb" path="res://assets/Undead Sprite Pack/SHEETS/undead_attack_sheet.png" id="3_77h4f"]
+[ext_resource type="Script" path="res://scripts/attack.szkielet.gd" id="4_s6y1g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u6drd"]
 atlas = ExtResource("1_qkxhw")
@@ -293,7 +294,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_32gh8")
 }],
 "loop": true,
-"name": &"atack",
+"name": &"attack",
 "speed": 15.0
 }]
 
@@ -308,16 +309,20 @@ script = ExtResource("1_h6yse")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jibkq")
-animation = &"atack"
+animation = &"attack"
 autoplay = "Walk"
-frame_progress = 0.317588
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 4)
 shape = SubResource("RectangleShape2D_0in61")
 
 [node name="attack" type="Area2D" parent="."]
+script = ExtResource("4_s6y1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attack"]
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_p3h12")
+
+[connection signal="body_entered" from="attack" to="." method="_on_attack_body_entered"]
+[connection signal="body_entered" from="attack" to="attack" method="_on_body_entered"]
+[connection signal="body_exited" from="attack" to="attack" method="_on_body_exited"]

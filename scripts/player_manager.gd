@@ -22,6 +22,7 @@ func add_exp(amount: int) -> void:
 	print("Level up! Your level is now %s" % level)
 	
 func deal_damage(amount: int) -> void:
+	print("in")
 	if immunity > 0:
 		return
 	hp -= amount
