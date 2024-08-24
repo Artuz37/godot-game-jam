@@ -5,7 +5,7 @@ extends Area2D
 var player_present = false
 
 var attack_timer: float = 0.0
-var attack_speed: float = 1.0  # 1.0 seconds
+var attack_speed: float = 0.5  # 1.0 seconds
 
 func _process(delta: float) -> void:
 	if player_present:

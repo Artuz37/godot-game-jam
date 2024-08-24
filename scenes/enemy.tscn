@@ -1,10 +1,10 @@
 [gd_scene load_steps=67 format=3 uid="uid://b4r5iw81xrt3l"]
 
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="1_h6yse"]
-[ext_resource type="Texture2D" path="res://assets/Undead Sprite Pack/SHEETS/undead_walk_sheet.png" id="1_qkxhw"]
-[ext_resource type="Texture2D" path="res://assets/Undead Sprite Pack/SHEETS/undead_attack_sheet.png" id="3_77h4f"]
+[ext_resource type="Texture2D" uid="uid://da4c46gtrnj75" path="res://assets/Undead Sprite Pack/SHEETS/undead_walk_sheet.png" id="1_qkxhw"]
+[ext_resource type="Texture2D" uid="uid://0blwdkeh4wfn" path="res://assets/Undead Sprite Pack/SHEETS/undead_attack_sheet.png" id="3_77h4f"]
 [ext_resource type="Script" path="res://scripts/attack.szkielet.gd" id="4_s6y1g"]
-[ext_resource type="Texture2D" path="res://assets/Undead Sprite Pack/SHEETS/undead_idle_sheet.png" id="4_t5s53"]
+[ext_resource type="Texture2D" uid="uid://u21h2f4nkro" path="res://assets/Undead Sprite Pack/SHEETS/undead_idle_sheet.png" id="4_t5s53"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u6drd"]
 atlas = ExtResource("1_qkxhw")
@@ -368,7 +368,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"attack",
-"speed": 15.0
+"speed": 19.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -442,7 +442,7 @@ script = ExtResource("1_h6yse")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jibkq")
-animation = &"idle"
+animation = &"attack"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
