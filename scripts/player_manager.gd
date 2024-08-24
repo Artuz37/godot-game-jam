@@ -37,3 +37,6 @@ func heal(amount: int) -> void:
 	hp += amount
 	print("healed")
 	hp = min(hp, max_hp)
+
+func grant_immunity(anount: float) -> void:
+	immunity = 0.5

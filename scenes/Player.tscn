@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://42ym2ooql2ft"]
+[gd_scene load_steps=58 format=3 uid="uid://42ym2ooql2ft"]
 
 [ext_resource type="Texture2D" uid="uid://rderbfsxmojh" path="res://assets/Player_anim2.png" id="1_cy8ni"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_kxfbs"]
@@ -154,10 +154,6 @@ region = Rect2(128, 64, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_k0rns"]
 atlas = ExtResource("1_cy8ni")
 region = Rect2(160, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r4gxh"]
-atlas = ExtResource("1_cy8ni")
-region = Rect2(192, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qi2dj"]
 atlas = ExtResource("1_cy8ni")
@@ -355,9 +351,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_k0rns")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r4gxh")
 }],
 "loop": false,
 "name": &"roll",
@@ -428,9 +421,13 @@ script = ExtResource("1_kxfbs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_opo3w")
-animation = &"walk"
+animation = &"roll"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_x71hf")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
